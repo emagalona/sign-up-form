@@ -43,6 +43,7 @@ body {
 
 ul {
     list-style-type: none;
+    padding: 0;;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -59,25 +60,79 @@ ul li {
     display: flex;
     font-size: .7rem;
     margin: 0;
+    gap: 3rem;
+    flex-wrap: wrap;
 }
 
 .input-container {
     box-shadow: 10px 10px 10px #E5E6E7, 0 0 0.9em #e5e6e7;
     background-color: #FFFFFF;
-    padding: 1.5rem;
-}
-
-.input-container span{
-    padding-left: 1.5rem;
+    padding: 2rem var(--left-indention);
 }
 
 .create-account {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     padding-left: var(--left-indention);
+}
+
+input[type='text'], 
+input[type='email'],
+input[type='password']{
+    border: 1px solid rgba(17, 204, 128, .5);
+    height:2rem;
+    width: 50ch;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: .8rem;
+}
+
+:focus {
+    outline:1px solid rgba(17, 204, 128);
+    box-shadow: 5px 5px 5px #E5E6E7;
+}
+
+:valid{
+    border:blue;
+}
+
+:invalid {
+    border: red;
+}
+
+.create-account button {
+    border-radius: 10px;
+    border: none;
+    background: rgba(17, 204, 128, .8);
+    color: #ffffff;
+    padding: 1rem 3.5rem;
+    font-size:1.2rem;
+    font-weight: 600;
+    font-style: inherit;
+    cursor: pointer;
+}
+
+.create-account button:hover {
+    background: rgba(17,204,128);
 }
 
 .right-login {
     padding-left: var(--left-indention);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.right-login a {
+    text-decoration: none;
+    color: rgba(17, 204, 128, .5);
+}
+
+.right-login a:hover {
+    color: rgba(17,204,128);
+}
+
+.error-msg {
+    color: red;
+    font-size: .7rem;
 }
 
 
