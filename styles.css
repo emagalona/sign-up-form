@@ -1,16 +1,9 @@
-@import url('https://fonts.cdnfonts.com/css/br-cobane');
-
 * {
     box-sizing: border-box;
     border-collapse: collapse;
 }
 body {
     font-family:'Poppins', sans-serif;
-    background-image: url("assets/bg-image.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     margin: 0;
@@ -19,7 +12,35 @@ body {
 
 .left-section {
     width: 40vw;
+    background-image: url("assets/sidebar-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:rgb(31, 31, 31, .7);
+    padding: 10px;
 }
+
+.left-section a {
+    text-decoration: none;
+}
+
+.logo {
+    width:15rem;
+    height: 15rem;
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+
 .right-section {
     background-color: #F9FAFB;
     height: 100vh;
@@ -30,6 +51,8 @@ body {
     gap: 2rem;
     font-size: 1.5rem;
     font-weight: 600;
+    flex-shrink: 1;
+    color:rgb(128, 128, 128, 1);
 }
 
 .right-intro{
@@ -53,7 +76,7 @@ ul li {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    font-weight: 200;
+    font-weight: 600;
 }
 
 .contact-info {
@@ -65,7 +88,7 @@ ul li {
 }
 
 .input-container {
-    box-shadow: 10px 10px 10px #E5E6E7, 0 0 0.9em #e5e6e7;
+    box-shadow: 10px 10px 20px #E5E6E7;
     background-color: #FFFFFF;
     padding: 2rem var(--left-indention);
 }
@@ -133,6 +156,7 @@ input[type='password']{
 .error-msg {
     color: red;
     font-size: .7rem;
+    visibility: hidden;
 }
 
 
